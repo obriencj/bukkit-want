@@ -68,7 +68,6 @@ public class WantPlugin extends JavaPlugin {
 	    for(ItemData item : idata) {
 		for(String alias : item.aliases) {
 		    alias = alias_transform(alias);
-		    System.out.println("  alias: " + alias);
 		    this.items.put(alias, item);
 		}
 	    }

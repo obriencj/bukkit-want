@@ -105,7 +105,7 @@ items:
   - id: 35
     name:
       - Wool
-    type:
+    types:
       - type: 0
         name:
           - White
@@ -174,7 +174,7 @@ items:
       - Double Slab
       - Stone Double Slab
       - Double Stone
-    type:
+    types:
       - type: 0
       - type: 1
         name:
@@ -194,7 +194,7 @@ items:
       - Slab
       - Half Block
       - Half Stone
-    type:
+    types:
       - type: 0
       - type: 1
         name:
@@ -511,7 +511,7 @@ items:
   - id: 351
     name:
       - Ink Sac
-    type:
+    types:
       - type: 0
         name:
           - Black Dye
