@@ -1,0 +1,642 @@
+items:
+  - id: 1
+    name:
+      - Stone
+      - Rock
+  - id: 2
+    name:
+      - Grass
+  - id: 3
+    name:
+      - Dirt
+  - id: 4
+    name:
+      - Cobblestone
+  - id: 5
+    name:
+      - Wooden Plank
+      - Lumber
+  - id: 6
+    name:
+      - Sapling
+  - id: 8
+    name:
+      - Water
+  - id: 9
+    name:
+      - Water Block
+      - Still Water
+  - id: 10
+    name:
+      - Lava
+  - id: 11
+    name:
+      - Lava Block
+      - Still Lava
+  - id: 12
+    name:
+      - Sand
+  - id: 13
+    name:
+      - Gravel
+  - id: 14
+    name:
+      - Gold Ore
+  - id: 15
+    name:
+      - Iron Ore
+  - id: 16
+    name:
+      - Coal Ore
+  - id: 17
+    name:
+      - Log
+      - Wood
+    types:
+      - type: 0
+      - type: 1
+        name:
+          - Spruce Log
+      - type: 2
+        name:
+          - Birch Log
+  - id: 18
+    name:
+      - Leaves
+    types:
+      - type: 0
+      - type: 1
+        name:
+          - Spruce Leaves
+      - type: 2
+        name:
+          - Birch Leaves
+  - id: 20
+    name:
+      - Glass
+      - Window
+  - id: 21
+    name:
+      - Lapis Lazuli Ore
+      - Lapis Ore
+  - id: 23
+    name:
+      - Dispenser
+      - Turret
+  - id: 24
+    name:
+      - Sandstone
+  - id: 25
+    name:
+      - Note Block
+      - Sound Block
+      - Noise Block
+  - id: 26
+    name:
+      - Bed
+  - id: 27
+    name:
+      - Powered Rail
+      - Booster Track
+  - id: 28
+    name:
+      - Detector Rail
+      - Trigger Track
+  - id: 35
+    name:
+      - Wool
+    type:
+      - type: 0
+        name:
+          - White
+      - type: 1
+        name:
+          - Orange
+      - type: 2
+        name:
+          - Magenta
+      - type: 3
+        name:
+          - Light Blue
+      - type: 4
+        name:
+          - Yellow
+      - type: 5
+        name:
+          - Light Green
+      - type: 6
+        name:
+          - Pink
+      - type: 7
+        name:
+          - Gray
+      - type: 8
+        name:
+          - Light Gray
+      - type: 9
+        name:
+          - Cyan
+      - type: 10
+        name:
+          - Purple
+      - type: 11
+        name:
+          - Blue
+      - type: 12
+        name:
+          - Brown
+      - type: 13
+        name:
+          - Green
+      - type: 14
+        name:
+          - Red
+      - type: 15
+        name:
+          - Black
+  - id: 37
+    name:
+      - Flower
+      - Yellow Flower
+      - Tulip
+  - id: 38
+    name:
+      - Rose
+      - Red Flower
+  - id: 39
+    name:
+      - Brown Mushroom
+  - id: 40
+    name:
+      - Red Mushroom
+  - id: 43
+    name:
+      - Double Slab
+      - Stone Double Slab
+      - Double Stone
+    type:
+      - type: 0
+      - type: 1
+        name:
+          - Sandstone Double Slab
+          - Double Sandstone
+      - type: 2
+        name:
+          - Wood Double Slab
+          - Wooden Double Slab
+          - Double Wood
+      - type: 3
+        name:
+          - Cobblestone Double Slab
+          - Double Cobblestone
+  - id: 44
+    name:
+      - Slab
+      - Half Block
+      - Half Stone
+    type:
+      - type: 0
+      - type: 1
+        name:
+          - Sandstone Slab
+          - Half Sandstone
+      - type: 2
+        name:
+          - Wood Slab
+          - Wooden Slab
+          - Half Wood
+      - type: 3
+        name:
+          - Cobblestone Slab
+          - Half Cobblestone
+  - id: 45
+    name:
+      - Brick
+  - id: 46
+    name:
+      - TNT
+      - Dynamite
+      - Boom
+  - id: 47
+    name:
+      - Bookshelf
+      - Book Shelf
+  - id: 48
+    name:
+      - Mossy Cobblestone
+      - Moss Stone
+      - Moss
+      - Dungeon Cobblestone
+      - Dungeon Stone
+  - id: 49
+    name:
+      - Obsidian
+      - Obsidium
+  - id: 50
+    name:
+      - Torch
+  - id: 51
+    name:
+      - Fire
+  - id: 52
+    name:
+      - Monster Spawner
+      - Spawner
+  - id: 53
+    name:
+      - Wooden Stairs
+      - Wood Stairs
+  - id: 54
+    name:
+      - Chest
+      - Treasure Chest
+      - Box
+  - id: 58
+    name:
+      - Crafting Table
+      - Workbench
+  - id: 61
+    name:
+      - Furnace
+      - Stove
+  - id: 65
+    name:
+      - Ladder
+  - id: 66
+    name:
+      - Rail
+      - Minecart Tracks
+      - Track
+  - id: 67
+    name:
+      - Stone Stairs
+  - id: 69
+    name:
+      - Lever
+  - id: 70
+    name:
+      - Stone Pressue Plate
+      - Stone Plate
+  - id: 72
+    name:
+      - Wooden Pressure Plate
+      - Wooden Plate
+      - Wood Pressure Plate
+      - Wood Plate
+  - id: 76
+    name:
+      - Redstone Torch
+      - Red Torch
+  - id: 77
+    name:
+      - Button
+      - Stone Button
+  - id: 81
+    name:
+      - Cactus
+  - id: 84
+    name:
+      - Jukebox
+  - id: 85
+    name:
+      - Fence
+      - Wooden Fence
+  - id: 86
+    name:
+      - Pumpkin
+  - id: 89
+    name:
+      - Glowstone
+      - Glow Stone
+  - id: 259
+    name:
+      - Flint and Steel
+      - Lighter
+      - Fire Starter
+  - id: 261
+    name:
+      - Bow
+  - id: 262
+    name:
+      - Arrow
+  - id: 263
+    name:
+      - Coal
+    type:
+      - type: 0
+      - type: 1
+        name:
+          - Charcoal
+  - id: 264
+    name:
+      - Diamond
+  - id: 265
+    name:
+      - Iron Bar
+      - Iron Ingot
+      - Iron
+  - id: 266
+    name:
+      - Gold Bar
+      - Gold Ingot
+      - Gold
+  - id: 276
+    name:
+      - Diamond Sword
+  - id: 277
+    name:
+      - Diamond Shovel
+  - id: 278
+    name:
+      - Diamond Pickaxe
+      - Diamond Pick
+  - id: 279
+    name:
+      - Diamond Axe
+  - id: 280
+    name:
+      - Stick
+      - Wooden Stick
+      - Wood Stick
+  - id: 281
+    name:
+      - Bowl
+      - Wooden Bowl
+      - Wood Bowl
+      - Soup Bowl
+  - id: 282
+    name:
+      - Mushroom Soup
+      - Soup
+  - id: 287
+    name:
+      - String
+  - id: 288
+    name:
+      - Feather
+  - id: 289
+    name:
+      - Gunpowder
+      - Sulphur
+  - id: 293
+    name:
+      - Diamond Hoe
+  - id: 295
+    name:
+      - Seeds
+  - id: 296
+    name:
+      - Wheat
+  - id: 310
+    name:
+      - Diamond Helmet
+      - Diamond Helm
+      - Diamond Hat
+      - Diamond Head
+  - id: 311
+    name:
+      - Diamond Chestplate
+      - Diamond Chest
+      - Diamond Shirt
+  - id: 312
+    name:
+      - Diamond Leggings
+      - Diamond Legs
+      - Diamond Pants
+  - id: 313
+    name:
+      - Diamond Boots
+      - Diamond Feet
+      - Diamond Shoes
+  - id: 318
+    name:
+      - Flint
+      - Arrow Head
+  - id: 319
+    name:
+      - Raw Porkchop
+      - Raw Pork
+      - Pork
+  - id: 320
+    name:
+      - Cooked Porkchop
+      - Cooked Pork
+      - Bacon
+  - id: 321
+    name:
+      - Painting
+      - Artwork
+      - Art
+  - id: 322
+    name:
+      - Golden Apple
+      - Gold Apple
+  - id: 323
+    name:
+      - Sign
+      - Wooden Sign
+      - Wood Sign
+  - id: 324
+    name:
+      - Wooden Door
+      - Wood Door
+      - Door
+  - id: 325
+    name:
+      - Bucket
+  - id: 326
+    name:
+      - Water Bucket
+  - id: 327
+    name:
+      - Lava Bucket
+  - id: 328
+    name:
+      - Minecart
+  - id: 329
+    name:
+      - Saddle
+  - id: 330
+    name:
+      - Iron Door
+      - Metal Door
+  - id: 331
+    name:
+      - Redstone Dust
+      - Redstone
+  - id: 332
+    name:
+      - Snowball
+      - Snow Ball
+  - id: 334
+    name:
+      - Leather
+      - Hide
+  - id: 335
+    name:
+      - Milk Bucket
+      - Milk
+  - id: 337
+    name:
+      - Clay Ball
+      - Clay
+  - id: 338
+    name:
+      - Sugar Cane
+      - Reeds
+      - Bamboo
+  - id: 340
+    name:
+      - Book
+  - id: 342
+    name:
+      - Storage Minecart
+  - id: 343
+    name:
+      - Powered Minecart
+  - id: 344
+    name:
+      - Egg
+  - id: 345
+    name:
+      - Compass
+  - id: 346
+    name:
+      - Fishing Rod
+      - Fishing Pole
+  - id: 347
+    name:
+      - Clock
+      - Watch
+  - id: 351
+    name:
+      - Ink Sac
+    type:
+      - type: 0
+        name:
+          - Black Dye
+      - type: 1
+        name:
+          - Red Dye
+          - Rose Red
+      - type: 2
+        name:
+          - Green Dye
+          - Cactus Green
+      - type: 3
+        name:
+          - Brown Dye
+          - Cocoa Beans
+      - type: 4
+        name:
+          - Blue Dye
+          - Lapis Lazuli
+      - type: 5
+        name:
+          - Purple Dye
+      - type: 6
+        name:
+          - Cyan Dye
+      - type: 7
+        name:
+          - Light Gray Dye
+          - Light Grey Dye
+      - type: 8
+        name:
+          - Gray Dye
+          - Grey Dye
+      - type: 9
+        name:
+          - Pink Dye
+      - type: 10
+        name:
+          - Lime Green Dye
+          - Light Green Dye
+      - type: 11
+        name:
+          - Yellow Dye
+      - type: 12
+        name:
+          - Light Blue Dye
+      - type: 13
+        name:
+          - Magenta Dye
+      - type: 14
+        name:
+          - Orange Dye
+      - type: 15
+        name:
+          - White Dye
+          - Bleach
+          - Bone Meal
+  - id: 352
+    name:
+      - Bone
+  - id: 353
+    name:
+      - Sugar
+  - id: 354
+    name:
+      - Cake
+  - id: 356
+    name:
+      - Redstone Repeater
+      - Redstone Diode
+  - id: 357
+    name:
+      - Cookie
+
+
+groups:
+  - name: natural
+    items: [1, 2, 3, 12, 13, 17, 24, 35, 89, 337 ]
+    stack: 64
+  - name: construction
+    items: [4, 5, 20, 43, 44, 45, 47, 48, 49, 53, 67, 85 ]
+    stack: 64
+  - name: plants
+    items: [6, 18, 37, 38, 39, 40, 81, 86, 295, 296, 338 ]
+    stack: 16
+  - name: ores
+    items: [14, 15, 16, 21, 263, 264, 265, 266 ]
+    stack: 32
+  - name: home
+    items: [23, 25, 26, 54, 58, 61, 84, 324, 330 ]
+    stack: 1
+  - name: railway
+    items: [27, 28, 66 ]
+    stack: 32
+  - name: vehicles
+    items: [328, 329, 342, 343 ]
+  - name: redstone
+    items: [69, 70, 72, 76, 77, 331, 356 ]
+    stack: 16
+  - name: restricted
+    items: [46, 51, 52, 322 ]
+    stack: 16
+  - name: elemental
+    items: [8, 9, 10, 11, 51 ]
+    stack: 8
+  - name: common
+    items: [50, 65, 262 ]
+    stack: 64
+  - name: tools
+    items: [261, 345, 346, 347 ]
+    stack: 1
+  - name: diamondtools
+    items: [276, 277, 278, 279, 293 ]
+    stack: 1
+  - name: diamondarmor
+    items: [310, 311, 312, 313 ]
+    stack: 1
+  - name: misc
+    items: [280, 281, 287, 288, 289, 318, 332, 334, 340, 344, 351, 352, 353 ]
+    stack: 16
+  - name: miscsingles
+    items: [321, 323, 325 ]
+  - name: food
+    items: [282, 319, 320, 354, 357 ]
+    stack: 1
+
+
+# The end.

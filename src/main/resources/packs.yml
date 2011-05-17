@@ -1,0 +1,37 @@
+packs:
+  - name: welcome
+    title: "A Welcoming Pack"
+    message: "Welcome to the server"
+    items:
+      - id: 50     # torches
+        count: 16
+      - id: 261    # bow
+        count: 1
+      - id: 262    # arrows
+        count: 32
+      - id: 357    # cookie
+        count: 1
+
+  - name: tools
+    title: "A Pack of Tools"
+    items:
+    
+  - name: adventure
+    title: "Equipment for an Adventure"
+    items:
+
+  - name: pity
+    title: "The Pity Pack"
+    message: "Hang in there!"
+    items:
+      - id: 50     # torches
+        count: 32
+      - id: 261    # bow
+        count: 1
+      - id: 262    # arrows
+        count: 32
+      - id: 357    # cookie
+        count: 1
+
+
+# The end.

@@ -1,0 +1,23 @@
+name: Want
+main: net.preoccupied.bukkit.want.WantPlugin
+version: 0.1
+author: obriencj@gmail.com
+database: false
+description: Grants stacks of items depending on permissions
+
+commands:
+  want:
+    description: Grant yourself a stack of a given item
+    usage: /want ITEM-NAME
+    permission: preoccupied.want.item
+
+  grant:
+    description: Grants a player a stack of a given item
+    usage: /grant PLAYER ITEM-NAME
+    permission: preoccupied.want.grant
+    
+  pack:
+    description: Grants a player a pre-defined pack of items
+    usage: /pack PLAYER PACK-NAME
+    permission: preoccupied.want.pack
+
