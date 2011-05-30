@@ -9,7 +9,9 @@ import org.bukkit.entity.Player;
 import net.preoccupied.bukkit.permissions.PermissionCheck;
 
 
-
+/**
+   @author Christopher O'Brien <obriencj@gmail.com>
+ */
 class PackData {
     
     public String name;

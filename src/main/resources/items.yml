@@ -1,3 +1,14 @@
+#
+# Item database for the Want plugin for Bukkit. A simple mapping of
+# item ids to friendly aliases, and group data for permissions and
+# stack-size.
+#
+# Data is pulled from the Minecraft Wiki page:
+#  - http://www.minecraftwiki.net/wiki/Data_values
+#
+# author: Christopher O'Brien <obriencj@gmail.com>
+#
+
 items:
   - id: 1
     name:
@@ -91,13 +102,11 @@ items:
       - Note Block
       - Sound Block
       - Noise Block
-  - id: 26
-    name:
-      - Bed
   - id: 27
     name:
       - Powered Rail
       - Booster Track
+      - Booster
   - id: 28
     name:
       - Detector Rail
@@ -245,7 +254,9 @@ items:
   - id: 53
     name:
       - Wooden Stairs
+      - Wooden Steps
       - Wood Stairs
+      - Wood Steps
   - id: 54
     name:
       - Chest
@@ -270,6 +281,9 @@ items:
   - id: 67
     name:
       - Stone Stairs
+      - Stone Steps
+      - Cobblestone Stairs
+      - Cobblestone Steps
   - id: 69
     name:
       - Lever
@@ -578,6 +592,9 @@ items:
   - id: 354
     name:
       - Cake
+  - id: 355
+    name:
+      - Bed
   - id: 356
     name:
       - Redstone Repeater
@@ -586,6 +603,12 @@ items:
     name:
       - Cookie
 
+
+# This section manages how we categorize items. The group name
+# determines the permission we check when someone attempts to /want or
+# /grant an item. eg: if someone wanted to spawn an item that was in
+# the "railway" group, they would need to have the
+# "preoccupied.want.group.railway" permission node.
 
 groups:
   - name: natural
@@ -597,7 +620,7 @@ groups:
   - name: plants
     items: [6, 18, 37, 38, 39, 40, 81, 86, 295, 296, 338 ]
     stack: 16
-  - name: ores
+  - name: ore
     items: [14, 15, 16, 21, 263, 264, 265, 266 ]
     stack: 32
   - name: home

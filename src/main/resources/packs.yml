@@ -1,3 +1,14 @@
+#
+# Pack database for the Want plugin for Bukkit. A simple mapping of
+# groups of items to pack aliases
+#
+# Packs have a name, which is used to determine their permission node
+# and to reference them via the /pack command, a title, an optional
+# message, and a list of items. Each item is an id number and a count.
+# 
+# author: Christopher O'Brien <obriencj@gmail.com>
+#
+
 packs:
   - name: welcome
     title: "A Welcoming Pack"
@@ -12,6 +23,11 @@ packs:
       - id: 357    # cookie
         count: 1
 
+  - name: diggy
+    title: "Diggy diggy hole"
+    message: "Digging a hole. Diggy diggy hole!"
+    items:
+        
   - name: tools
     title: "A Pack of Tools"
     items:

@@ -9,6 +9,9 @@ import org.bukkit.entity.Player;
 import net.preoccupied.bukkit.permissions.PermissionCheck;
 
 
+/**
+   @author Christopher O'Brien <obriencj@gmail.com>
+ */
 class ItemData {
     
     public int id;
@@ -28,9 +31,14 @@ class ItemData {
     }
 
 
+    public String getName() {
+	return aliases.get(0);
+    }
+
+
     public boolean permitted(Player p) {
 	if(this.permission == null) {
-	    this.permission = PermissionCheck.forNode("preoccupied.want.item." + group);
+	    this.permission = PermissionCheck.forNode("preoccupied.want.group." + group);
 	}
 	return this.permission.check(p);
     }

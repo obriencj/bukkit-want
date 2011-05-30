@@ -8,16 +8,30 @@ description: Grants stacks of items depending on permissions
 commands:
   want:
     description: Grant yourself a stack of a given item
-    usage: /want ITEM-NAME
+    usage: /want ITEM-NAME [COUNT]
     permission: preoccupied.want.item
 
   grant:
     description: Grants a player a stack of a given item
-    usage: /grant PLAYER ITEM-NAME
+    usage: /grant PLAYER ITEM-NAME [COUNT]
     permission: preoccupied.want.grant
+
+  item-search:
+    description: Searches for items by name
+    usage: /item-search PATTERN
+    permission: preoccupied.want.info
     
   pack:
     description: Grants a player a pre-defined pack of items
     usage: /pack PLAYER PACK-NAME
     permission: preoccupied.want.pack
 
+  pack-list:
+    description: List packs by name, optionally matching a pattern
+    usage: /pack-list [PATTERN]
+    permission: preoccupied.want.info
+
+  pack-info:
+    description: Shows the information for the given pack
+    usage: /pack-info PACK-NAME
+    permission: preoccupied.want.info
