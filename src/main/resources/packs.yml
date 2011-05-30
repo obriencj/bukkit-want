@@ -25,17 +25,40 @@ packs:
 
   - name: diggy
     title: "Diggy diggy hole"
-    message: "Digging a hole. Diggy diggy hole!"
+    message: "Diggy diggy hole, Digging a hole."
     items:
-        
-  - name: tools
-    title: "A Pack of Tools"
-    items:
+      - id: 50     # torch
+        count: 32
+      - id: 65     # ladder
+        count: 32
+      - id: 256    # iron shovel
+        count: 1
+      - id: 257    # iron pickaxe
+        count: 1
     
   - name: adventure
     title: "Equipment for an Adventure"
+    message: "Be brave, not foolhardy: hug no creepers."
     items:
-
+      - id: 50     # torch
+        count: 32
+      - id: 261    # bow
+        count: 1
+      - id: 262    # arrows
+        count: 32
+      - id: 267    # iron sword
+        count: 1
+      - id: 306    # iron helm
+        count: 1
+      - id: 307    # iron chest
+        count: 1
+      - id: 308    # iron legs
+        count: 1
+      - id: 309    # iron boots
+        count: 1
+      - id: 346    # fishing rod
+        count: 1
+        
   - name: pity
     title: "The Pity Pack"
     message: "Hang in there!"

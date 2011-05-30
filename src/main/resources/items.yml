@@ -322,6 +322,16 @@ items:
     name:
       - Glowstone
       - Glow Stone
+  - id: 256
+    name:
+      - Iron Shovel
+  - id: 257
+    name:
+      - Iron Pickaxe
+      - Iron Pick
+  - id: 258
+    name:
+      - Iron Axe
   - id: 259
     name:
       - Flint and Steel
@@ -354,6 +364,9 @@ items:
       - Gold Bar
       - Gold Ingot
       - Gold
+  - id: 267
+    name:
+      - Iron Sword
   - id: 276
     name:
       - Diamond Sword
@@ -392,6 +405,9 @@ items:
     name:
       - Gunpowder
       - Sulphur
+  - id: 292
+    name:
+      - Iron Hoe
   - id: 293
     name:
       - Diamond Hoe
@@ -401,6 +417,27 @@ items:
   - id: 296
     name:
       - Wheat
+  - id: 306
+    name:
+      - Iron Helmet
+      - Iron Helm
+      - Iron Hat
+      - Iron Head
+  - id: 307
+    name:
+      - Iron Chestplate
+      - Iron Chest
+      - Iron Shirt
+  - id: 308
+    name:
+      - Iron Leggings
+      - Iron Legs
+      - Iron Pants
+  - id: 309
+    name:
+      - Iron Boots
+      - Iron Feet
+      - Iron Shoes
   - id: 310
     name:
       - Diamond Helmet
@@ -482,6 +519,10 @@ items:
     name:
       - Snowball
       - Snow Ball
+  - id: 333
+    name:
+      - Boat
+      - Ship
   - id: 334
     name:
       - Leather
@@ -645,6 +686,12 @@ groups:
     stack: 64
   - name: tools
     items: [261, 345, 346, 347 ]
+    stack: 1
+  - name: irontools
+    items: [256, 257, 258, 267, 292 ]
+    stack: 1
+  - name: ironarmor
+    items: [306, 308, 309, 310 ]
     stack: 1
   - name: diamondtools
     items: [276, 277, 278, 279, 293 ]
