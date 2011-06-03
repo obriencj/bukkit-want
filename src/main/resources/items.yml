@@ -68,9 +68,11 @@ items:
       - type: 1
         name:
           - Spruce Log
+          - Spruce Wood
       - type: 2
         name:
           - Birch Log
+          - Birch Wood
   - id: 18
     name:
       - Leaves
@@ -322,6 +324,11 @@ items:
     name:
       - Glowstone
       - Glow Stone
+  - id: 96
+    name:
+      - Trapdoor
+      - Trap Door
+      - Hatch
   - id: 256
     name:
       - Iron Shovel
@@ -665,7 +672,7 @@ groups:
     items: [14, 15, 16, 21, 263, 264, 265, 266 ]
     stack: 32
   - name: home
-    items: [23, 25, 26, 54, 58, 61, 84, 324, 330 ]
+    items: [23, 25, 26, 54, 58, 61, 84, 96, 324, 330 ]
     stack: 1
   - name: railway
     items: [27, 28, 66 ]
