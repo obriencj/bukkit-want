@@ -550,6 +550,10 @@ items:
   - id: 340
     name:
       - Book
+  - id: 341
+    name:
+      - Slime Ball
+      - Goo
   - id: 342
     name:
       - Storage Minecart
@@ -707,7 +711,7 @@ groups:
     items: [310, 311, 312, 313 ]
     stack: 1
   - name: misc
-    items: [280, 281, 287, 288, 289, 318, 332, 334, 340, 344, 351, 352, 353 ]
+    items: [280, 281, 287, 288, 289, 318, 332, 334, 340, 341, 344, 351, 352, 353 ]
     stack: 16
   - name: miscsingles
     items: [321, 323, 325 ]
