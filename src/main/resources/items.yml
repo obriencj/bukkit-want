@@ -30,6 +30,14 @@ items:
   - id: 6
     name:
       - Sapling
+    types:
+      - type: 0
+      - type: 1
+        name:
+          - Spruce Sapling
+      - type: 2
+        name:
+          - Birch Sapling
   - id: 8
     name:
       - Water
@@ -113,6 +121,18 @@ items:
     name:
       - Detector Rail
       - Trigger Track
+  - id: 29
+    name:
+      - Sticky Piston
+      - Goo Piston
+  - id: 30
+    name:
+      - Cobweb
+      - Spider Web
+      - Web
+  - id: 33
+    name:
+      - Piston
   - id: 35
     name:
       - Wool
@@ -344,6 +364,9 @@ items:
       - Flint and Steel
       - Lighter
       - Fire Starter
+  - id: 260
+    name:
+      - Apple
   - id: 261
     name:
       - Bow
@@ -424,6 +447,9 @@ items:
   - id: 296
     name:
       - Wheat
+  - id: 297
+    name:
+      - Bread
   - id: 306
     name:
       - Iron Helmet
@@ -574,6 +600,13 @@ items:
     name:
       - Clock
       - Watch
+  - id: 349
+    name:
+      - Fish
+      - Raw Fish
+  - id: 350
+    name:
+      - Cooked Fish
   - id: 351
     name:
       - Ink Sac
@@ -651,9 +684,59 @@ items:
     name:
       - Redstone Repeater
       - Redstone Diode
+      - Diode
+      - Repeater
   - id: 357
     name:
       - Cookie
+  - id: 358
+    name:
+      - Map
+    - type: 0
+      name: 
+        - Map 0
+        - map_0
+    - type: 1
+      name:
+        - Map 1
+        - map_1
+    - type: 2
+      name:
+        - Map 2
+        - map_2
+    - type: 3
+      name:
+        - Map 3
+        - map_3
+    - type: 4
+      name:
+        - Map 4
+        - map_4
+    - type: 5
+      name:
+        - Map 5
+        - map_5
+    - type: 6
+      name:
+        - Map 6
+        - map_6
+    - type: 7
+      name:
+        - Map 7
+        - map_7
+    - type: 8
+      name:
+        - Map 8
+        - map_8
+    - type: 9
+      name:    
+        - Map 9
+        - map_9
+  - id: 359
+    name:
+      - Shears
+      - Scissors
+        
 
 
 # This section manages how we categorize items. The group name
@@ -684,7 +767,7 @@ groups:
   - name: vehicles
     items: [328, 329, 342, 343 ]
   - name: redstone
-    items: [69, 70, 72, 76, 77, 331, 356 ]
+    items: [29, 33, 69, 70, 72, 76, 77, 331, 356 ]
     stack: 16
   - name: restricted
     items: [46, 51, 52, 322 ]
@@ -696,7 +779,7 @@ groups:
     items: [50, 65, 262 ]
     stack: 64
   - name: tools
-    items: [261, 345, 346, 347 ]
+    items: [261, 345, 346, 347, 359 ]
     stack: 1
   - name: irontools
     items: [256, 257, 258, 267, 292 ]
@@ -711,12 +794,12 @@ groups:
     items: [310, 311, 312, 313 ]
     stack: 1
   - name: misc
-    items: [280, 281, 287, 288, 289, 318, 332, 334, 340, 341, 344, 351, 352, 353 ]
+    items: [30, 280, 281, 287, 288, 289, 318, 332, 334, 340, 341, 344, 351, 352, 353 ]
     stack: 16
   - name: miscsingles
-    items: [321, 323, 325 ]
+    items: [321, 323, 325, 358 ]
   - name: food
-    items: [282, 319, 320, 354, 357 ]
+    items: [260, 282, 297, 319, 320, 349, 350, 354, 357 ]
     stack: 1
 
 
