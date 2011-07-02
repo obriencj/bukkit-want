@@ -129,7 +129,7 @@ packs:
     title: "Redstone Experimenters Bundle"
     message: "Red wire or... red wire?"
     items:
-      - id: 55     # Redstone Dust
+      - id: 331     # Redstone Dust
         count: 64
       - id: 356    # Redstone Repeater
         count: 16
