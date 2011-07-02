@@ -324,7 +324,7 @@ public class WantPlugin extends JavaPlugin {
 		    msg(friend, "You've received " + pack.title);
 		}
 
-		msg(player, "You've given " + friend + " " + pack.title);
+		msg(player, "You've given " + recipient + " " + pack.title);
 		return true;
 	    }
 	};
