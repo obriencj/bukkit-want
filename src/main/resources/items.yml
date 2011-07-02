@@ -693,7 +693,7 @@ items:
     name:
       - Map
     - type: 0
-      name: 
+      name:
         - Map 0
         - map_0
     - type: 1
