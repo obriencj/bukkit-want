@@ -799,6 +799,7 @@ groups:
     stack: 16
   - name: miscsingles
     items: [321, 323, 325, 358 ]
+    stack: 1
   - name: food
     items: [260, 282, 297, 319, 320, 349, 350, 354, 357 ]
     stack: 1

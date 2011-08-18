@@ -1,9 +1,10 @@
 name: Want
 main: net.preoccupied.bukkit.want.WantPlugin
-version: 0.1
+version: 0.2
 author: obriencj@gmail.com
 database: false
 description: Grants stacks of items depending on permissions
+
 
 commands:
   want:
@@ -35,3 +36,55 @@ commands:
     description: Shows the information for the given pack
     usage: /pack-info PACK-NAME
     permission: preoccupied.want.info
+
+
+permission:
+  preoccupied.want.admin:
+    description: Admin rights
+    default: op
+    children:
+      preoccupied.want.item: true
+      preoccupied.want.pack: true
+      preoccupied.want.grant: true
+      preoccupied.want.info: true
+      preoccupied.want.item.*: true
+      preoccupied.want.pack.*: true
+
+  preoccupied.want.advanced:
+    description: Advanced users
+    default: false
+    children:
+      preoccupied.want.item: true
+      preoccupied.want.pack: true
+      preoccupied.want.grant: true
+      preoccupied.want.info: true
+      preoccupied.want.item.*: true
+      preoccupied.want.pack.*: true
+      
+  preoccupied.want.item:
+    description: Ability to use the basic want command
+    default: false
+
+  preoccupied.want.pack:
+    description: Ability to use the basic pack command
+    default: false
+
+  preoccupied.want.grant:
+    description: Ability to use the grant command
+    default: false
+
+  preoccupied.want.info:
+    description: Ability to search for items and packs
+    default: false
+
+  preoccupied.want.item.*:
+    description: All item groups
+    default: false
+
+  preoccupied.want.pack.*:
+    description: All item packs
+    default: false
+    
+
+
+# The end.
