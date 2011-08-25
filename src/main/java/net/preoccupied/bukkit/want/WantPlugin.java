@@ -38,11 +38,12 @@ public class WantPlugin extends JavaPlugin {
 
     public void onEnable() {
 	setupCommands();
+	getServer().getLogger().info(this + " is enabled");
     }
 
 
     public void onDisable() {
-	;
+	getServer().getLogger().info(this + " is disabled");
     }
 
 
@@ -96,8 +97,8 @@ public class WantPlugin extends JavaPlugin {
 	    }	    
 	}
 
-	System.out.println("loaded " + this.items_by_id.size() + " item IDs for Want");
-	System.out.println("loaded " + this.items.size() + " item aliases for Want");
+	getServer().getLogger().info("loaded " + this.items_by_id.size() + " item IDs");
+	getServer().getLogger().info("loaded " + this.items.size() + " item aliases");
 
 	/* pack data */
 
@@ -130,7 +131,7 @@ public class WantPlugin extends JavaPlugin {
 	    this.packs.put(name, pack);
 	}
 
-	System.out.println("loaded " + this.packs.size() + " packs for Want");
+	getServer().getLogger().info("loaded " + this.packs.size() + " packs");
     }
 
 
@@ -324,7 +325,10 @@ public class WantPlugin extends JavaPlugin {
 		    msg(friend, "You've received " + pack.title);
 		}
 
-		msg(player, "You've given " + recipient + " " + pack.title);
+		if(friend != player) {
+		    msg(player, "You've given " + recipient + " " + pack.title);
+		}
+
 		return true;
 	    }
 	};
