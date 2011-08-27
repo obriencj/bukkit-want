@@ -38,7 +38,7 @@ commands:
     permission: preoccupied.want.info
 
 
-permission:
+permissions:
   preoccupied.want.admin:
     description: Admin rights
     default: op
