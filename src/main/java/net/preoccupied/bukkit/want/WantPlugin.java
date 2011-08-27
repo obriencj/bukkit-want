@@ -88,6 +88,10 @@ public class WantPlugin extends JavaPlugin {
 	   it as auxillary data to items in their membership */
 
 	perm = pm.getPermission("preoccupied.want.item.*");
+	if(perm == null) {
+	    perm = new Permission("preoccupied.want.item.*", PermissionDefault.FALSE);
+	    pm.addPermission(perm);
+	}
 
 	for(ConfigurationNode node: conf.getNodeList("groups", null)) {
 	    String name = node.getString("name", "undefined");
@@ -110,7 +114,7 @@ public class WantPlugin extends JavaPlugin {
 		    i.group = name;
 		    i.stack = stack;
 		}
-	    }	    
+	    }
 	}
 
 	/* update the item group superpermission */
@@ -123,6 +127,10 @@ public class WantPlugin extends JavaPlugin {
 	/* pack data */
 
 	perm = pm.getPermission("preoccupied.want.pack.*");
+	if(perm == null) {
+	    perm = new Permission("preoccupied.want.pack.*", PermissionDefault.FALSE);
+	    pm.addPermission(perm);
+	}
 
 	this.packs = new HashMap<String,PackData>();
 
