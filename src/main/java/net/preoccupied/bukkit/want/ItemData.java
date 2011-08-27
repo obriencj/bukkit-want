@@ -38,7 +38,7 @@ class ItemData {
 
     public boolean permitted(Player p) {
 	if(this.permission == null) {
-	    this.permission = PermissionCheck.forNode("preoccupied.want.group." + group);
+	    this.permission = PermissionCheck.forNode("preoccupied.want.item." + group);
 	}
 	return this.permission.check(p);
     }

@@ -12,9 +12,12 @@ import java.util.TreeMap;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.config.Configuration;
 import org.bukkit.util.config.ConfigurationNode;
+import org.bukkit.permissions.Permission;
+import org.bukkit.permissions.PermissionDefault;
 
 import net.preoccupied.bukkit.ItemUtils;
 import net.preoccupied.bukkit.PluginConfiguration;
@@ -49,6 +52,9 @@ public class WantPlugin extends JavaPlugin {
 
     public void onLoad() {
 
+	PluginManager pm = getServer().getPluginManager();
+	Permission perm = null;
+
 	/* item data */
 
 	this.items = new HashMap<String,ItemData>();
@@ -81,10 +87,20 @@ public class WantPlugin extends JavaPlugin {
 	/* we aren't going to bother storing groups, we'll just attach
 	   it as auxillary data to items in their membership */
 
+	perm = pm.getPermission("preoccupied.want.item.*");
+
 	for(ConfigurationNode node: conf.getNodeList("groups", null)) {
 	    String name = node.getString("name", "undefined");
 	    int stack = node.getInt("stack", 1);
 	    
+	    /* create the permission for this item group */
+	    String gpermname = "preoccupied.want.item." + name;
+	    Permission gperm = new Permission(gpermname, PermissionDefault.FALSE);
+	    pm.addPermission(gperm);
+
+	    /* add this item group permission to the super permission */
+	    perm.getChildren().put(gpermname, true);
+
 	    for(int id : node.getIntList("items", null)) {
 		List<ItemData> found = items_by_id.get(id);
 		if(found == null)
@@ -97,10 +113,16 @@ public class WantPlugin extends JavaPlugin {
 	    }	    
 	}
 
+	/* update the item group superpermission */
+	perm.recalculatePermissibles();
+
 	getServer().getLogger().info("loaded " + this.items_by_id.size() + " item IDs");
 	getServer().getLogger().info("loaded " + this.items.size() + " item aliases");
 
+
 	/* pack data */
+
+	perm = pm.getPermission("preoccupied.want.pack.*");
 
 	this.packs = new HashMap<String,PackData>();
 
@@ -118,6 +140,14 @@ public class WantPlugin extends JavaPlugin {
 	    pack.title = node.getString("title", name);
 	    pack.message = node.getString("message", null);
 
+	    /* create the permission for this pack */
+	    String ppermname = "preoccupied.want.pack." + name;
+	    Permission pperm = new Permission(ppermname, PermissionDefault.FALSE);
+	    pm.addPermission(pperm);
+
+	    /* add this pack permission to the super permission */
+	    perm.getChildren().put(ppermname, true);
+
 	    for(ConfigurationNode itemnode : node.getNodeList("items", null)) {
 		int id = itemnode.getInt("id", 0);
 		int type = itemnode.getInt("type", 0);
@@ -130,6 +160,9 @@ public class WantPlugin extends JavaPlugin {
 	    
 	    this.packs.put(name, pack);
 	}
+
+	/* update the pack superpermission */
+	perm.recalculatePermissibles();
 
 	getServer().getLogger().info("loaded " + this.packs.size() + " packs");
     }
