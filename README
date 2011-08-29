@@ -1,0 +1,15 @@
+This is a plugin for the Bukkit Minecraft server.
+
+This plugin adds an item and pack listing for users to access. The
+/want and /grant commands allow players to receive and give
+(respectively) items by a number of names and easy-to-remember
+aliases.
+
+Items are categorized into groups, and each group has its own
+permission. When a user attempts to use /want to obtain an item, their
+permissions will be tested to ensure that they are permitted to ask
+for an item in that group.
+
+Packs are pre-configured sets of items. A user may use the /pack
+command to give multiple different items at once.
+
