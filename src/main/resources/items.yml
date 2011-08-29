@@ -744,7 +744,7 @@ items:
 # determines the permission we check when someone attempts to /want or
 # /grant an item. eg: if someone wanted to spawn an item that was in
 # the "railway" group, they would need to have the
-# "preoccupied.want.group.railway" permission node.
+# "preoccupied.want.item.railway" permission node.
 
 groups:
   - name: natural
@@ -760,7 +760,7 @@ groups:
     items: [14, 15, 16, 21, 263, 264, 265, 266 ]
     stack: 32
   - name: home
-    items: [23, 25, 26, 54, 58, 61, 84, 96, 324, 330 ]
+    items: [23, 25, 26, 54, 58, 61, 84, 96, 324, 330, 355 ]
     stack: 1
   - name: railway
     items: [27, 28, 66 ]
@@ -780,7 +780,7 @@ groups:
     items: [50, 65, 262 ]
     stack: 64
   - name: tools
-    items: [261, 345, 346, 347, 359 ]
+    items: [259, 261, 345, 346, 347, 359 ]
     stack: 1
   - name: irontools
     items: [256, 257, 258, 267, 292 ]
