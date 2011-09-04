@@ -25,6 +25,7 @@ import net.preoccupied.bukkit.permissions.PermissionCheck;
 import net.preoccupied.bukkit.permissions.PermissionCommand;
 
 
+
 /**
    @author Christopher O'Brien <obriencj@gmail.com>
  */
@@ -291,7 +292,11 @@ public class WantPlugin extends JavaPlugin {
 
 		int count = item.stack;
 		if(numstr != null) {
-		    count = Integer.parseInt(numstr);
+		    count = parseInt(player, numstr, count);
+		}
+		
+		if(count <= 0 ){
+		    return false;
 		}
 
 		ItemUtils.spawnItem(player, item.id, (short) item.type, count);
@@ -326,7 +331,11 @@ public class WantPlugin extends JavaPlugin {
 
 		int count = item.stack;
 		if(numstr != null) {
-		    count = Integer.parseInt(numstr);
+		    count = parseInt(player, numstr, count);
+		}
+
+		if(count <= 0) {
+		    return false;
 		}
 
 		ItemUtils.spawnItem(friend, item.id, (short) item.type, count);
