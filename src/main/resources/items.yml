@@ -63,7 +63,7 @@ items:
       - Lava Block
       - Still Lava
     group: restricted
-    - id: 12
+  - id: 12
     name:
       - Sand
     group: natural
