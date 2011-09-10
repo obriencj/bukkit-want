@@ -18,7 +18,6 @@ class ItemData {
 
     public int type = 0;
     public int stack = 1;
-    public String permission = null;
 
 
     public ItemData(int id, String group, List<String> aliases) {
@@ -34,10 +33,7 @@ class ItemData {
 
 
     public boolean permitted(Player p) {
-	if(this.permission == null) {
-	    this.permission = "preoccupied.want.item." + group;
-	}
-	return p.hasPermission(this.permission);
+	return p.hasPermission("preoccupied.want.item." + group);
     }
 }
 

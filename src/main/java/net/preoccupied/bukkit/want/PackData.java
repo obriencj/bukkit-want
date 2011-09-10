@@ -1,12 +1,9 @@
 package net.preoccupied.bukkit.want;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.entity.Player;
-
-import net.preoccupied.bukkit.permissions.PermissionCheck;
 
 
 /**
@@ -18,8 +15,6 @@ class PackData {
     public String title;
     public String message = null;
     public List<PackItem> items;
-
-    public PermissionCheck permission = null;
 
 
     public PackData(String name) {
@@ -40,10 +35,7 @@ class PackData {
 
 
     public boolean permitted(Player p) {
-	if(this.permission == null) {
-	    this.permission = PermissionCheck.forNode("preoccupied.want.pack." + name);
-	}
-	return this.permission.check(p);
+	return p.hasPermission("preoccupied.want.pack." + name);
     }
 
 
