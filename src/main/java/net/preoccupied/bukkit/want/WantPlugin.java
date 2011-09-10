@@ -40,6 +40,10 @@ public class WantPlugin extends JavaPlugin {
 
 
 
+    private static final String DEFAULT_GROUP = "undefined";
+
+
+
     public void onEnable() {
 	setupCommands();
 	getServer().getLogger().info(this + " is enabled");
@@ -52,17 +56,21 @@ public class WantPlugin extends JavaPlugin {
 
 
     public void onLoad() {
+	loadItems();
+	loadPacks();
+    }
 
+
+    private void loadItems() {
 	PluginManager pm = getServer().getPluginManager();
-	Permission perm = null;
 
-	/* item data */
-
-	this.items = new HashMap<String,ItemData>();
-	this.items_by_id = new TreeMap<Integer,List<ItemData>>();
+	Map<String,Integer> groupsize = new HashMap<String,Integer>();
+	Map<String,ItemData> items = new HashMap<String,ItemData>();
+	Map<Integer,List<ItemData>> items_by_id = new TreeMap<Integer,List<ItemData>>();
 	
 	Configuration conf = null;
 
+	/* get items.yml */
 	try {
 	    conf = PluginConfiguration.load(this, this.getFile(), "items.yml");
 	} catch(IOException ioe) {
@@ -71,70 +79,126 @@ public class WantPlugin extends JavaPlugin {
 	    return;
 	}
 
-	for(ConfigurationNode node : conf.getNodeList("items", null)) {
-	    int id = node.getInt("id", 0);
-
-	    List<ItemData> idata = loadItemData(id, node);
-	    this.items_by_id.put(id, idata);
-
-	    for(ItemData item : idata) {
-		for(String alias : item.aliases) {
-		    alias = alias_transform(alias);
-		    this.items.put(alias, item);
-		}
-	    }
-	}
-
-	/* we aren't going to bother storing groups, we'll just attach
-	   it as auxillary data to items in their membership */
-
-	perm = pm.getPermission("preoccupied.want.item.*");
+	Permission perm = pm.getPermission("preoccupied.want.item.*");
 	if(perm == null) {
 	    perm = new Permission("preoccupied.want.item.*", PermissionDefault.FALSE);
 	    pm.addPermission(perm);
 	}
 
-	for(ConfigurationNode node: conf.getNodeList("groups", null)) {
-	    String name = node.getString("name", "undefined");
-	    int stack = node.getInt("stack", 1);
-	    
-	    /* create the permission for this item group */
-	    String gpermname = "preoccupied.want.item." + name;
-	    Permission gperm = new Permission(gpermname, PermissionDefault.FALSE);
+	String gpermname = "preoccupied.want.item." + DEFAULT_GROUP;
+	Permission gperm = pm.getPermission(gpermname);
+	if(gperm == null) {
+	    gperm = new Permission(gpermname, PermissionDefault.FALSE);
 	    pm.addPermission(gperm);
-
-	    /* add this item group permission to the super permission */
 	    perm.getChildren().put(gpermname, true);
+	}
 
-	    for(int id : node.getIntList("items", null)) {
-		List<ItemData> found = items_by_id.get(id);
-		if(found == null)
-		    continue;
+	for(ConfigurationNode node: conf.getNodeList("groups", null)) {
+	    String name = node.getString("name", null);
+	    if(name == null) continue;
 
-		for(ItemData i : found) {
-		    i.group = name;
-		    i.stack = stack;
-		}
+	    groupsize.put(name, node.getInt("stack", 1));
+
+	    /* create the permission for this item group */
+	    gpermname = "preoccupied.want.item." + name;
+	    gperm = pm.getPermission(gpermname);
+	    if(gperm == null) {
+		gperm = new Permission(gpermname, PermissionDefault.FALSE);
+		pm.addPermission(gperm);
+		perm.getChildren().put(gpermname, true);
 	    }
 	}
 
 	/* update the item group superpermission */
 	perm.recalculatePermissibles();
 
-	getServer().getLogger().info("loaded " + this.items_by_id.size() + " item IDs");
-	getServer().getLogger().info("loaded " + this.items.size() + " item aliases");
+	for(ConfigurationNode node : conf.getNodeList("items", null)) {
+	    List<ItemData> idata = loadItemData(node, groupsize);
+	    if(idata.size() > 0) {
+		items_by_id.put(idata.get(0).id, idata);
+	    }
+
+	    for(ItemData item : idata) {
+		for(String alias : item.aliases) {
+		    alias = alias_transform(alias);
+		    items.put(alias, item);
+		}
+	    }
+	}
+
+	this.items_by_id = items_by_id;
+	this.items = items;
+
+	getServer().getLogger().info("loaded " + items_by_id.size() + " item IDs");
+	getServer().getLogger().info("loaded " + items.size() + " item aliases");
+    }
 
 
-	/* pack data */
 
+    private List<ItemData> loadItemData(ConfigurationNode node, Map<String,Integer> groups) {
+	int id = node.getInt("id", 0);
+	List<String> names = node.getStringList("name", null);
+	int stack = 1;
+	
+	if(id == 0 || names == null || names.isEmpty()) {
+	    return Collections.emptyList();
+	}
+
+	List<ItemData> items = new ArrayList<ItemData>(1);
+
+	String group = node.getString("group", DEFAULT_GROUP);
+	if(groups.containsKey(group)) {
+	    stack = groups.get(group);
+
+	} else {
+	    getServer().getLogger().warning("item id " + id + " claims membership in undeclared group: " + group);
+	    group = DEFAULT_GROUP;
+	}
+	stack = node.getInt("stack", stack);
+
+	ItemData zerotype = new ItemData(id, group, names);
+	items.add(zerotype);
+
+	zerotype.stack = stack;
+
+	for(ConfigurationNode typenode : node.getNodeList("types", null)) {
+	    int typeid = typenode.getInt("type", 0);
+	    names = typenode.getStringList("name", null);
+	    stack = typenode.getInt("stack", zerotype.stack);
+	    
+	    if(names == null || names.isEmpty())
+		continue;
+
+	    if(typeid == 0) {
+		zerotype.aliases.addAll(names);
+
+	    } else {
+		ItemData item = new ItemData(id, group, names);
+		item.type = typeid;
+		item.stack = stack;
+		items.add(item);
+	    }
+	}
+	
+	return items;
+    }
+
+
+
+    private void loadPacks() {
+	PluginManager pm = getServer().getPluginManager();
+	Permission perm = null;
+
+	Map<String,PackData> packs = new HashMap<String,PackData>();
+
+	/* setup the permission pack supernode */
 	perm = pm.getPermission("preoccupied.want.pack.*");
 	if(perm == null) {
 	    perm = new Permission("preoccupied.want.pack.*", PermissionDefault.FALSE);
 	    pm.addPermission(perm);
 	}
 
-	this.packs = new HashMap<String,PackData>();
-
+	Configuration conf = null;
 	try {
 	    conf = PluginConfiguration.load(this, this.getFile(), "packs.yml");
 	} catch(IOException ioe) {
@@ -167,13 +231,14 @@ public class WantPlugin extends JavaPlugin {
 		}
 	    }
 	    
-	    this.packs.put(name, pack);
+	    packs.put(name, pack);
 	}
 
 	/* update the pack superpermission */
 	perm.recalculatePermissibles();
 
-	getServer().getLogger().info("loaded " + this.packs.size() + " packs");
+	this.packs = packs;
+	getServer().getLogger().info("loaded " + packs.size() + " packs");
     }
 
 
@@ -192,46 +257,6 @@ public class WantPlugin extends JavaPlugin {
         pattern = pattern.replace("?", ".");
         pattern = pattern.replace("*", ".*");
         return pattern;
-    }
-
-
-
-    private static final String safestr(Object o) {
-	return (o != null)? o.toString(): "[null]";
-    }
-
-
-
-    private static List<ItemData> loadItemData(int id, ConfigurationNode node) {
-	List<String> names = node.getStringList("name", null);
-	
-	if(id == 0 || names == null || names.isEmpty()) {
-	    return Collections.emptyList();
-	}
-
-	List<ItemData> items = new ArrayList<ItemData>(1);
-
-	ItemData zerotype = new ItemData(id, names);
-	items.add(zerotype);
-
-	for(ConfigurationNode typenode : node.getNodeList("types", null)) {
-	    int typeid = typenode.getInt("type", 0);
-	    names = typenode.getStringList("name", null);
-	    
-	    if(names == null || names.isEmpty())
-		continue;
-
-	    if(typeid == 0) {
-		zerotype.aliases.addAll(names);
-
-	    } else {
-		ItemData ti = new ItemData(id, names);
-		ti.type = typeid;
-		items.add(ti);
-	    }
-	}
-	
-	return items;
     }
 
 

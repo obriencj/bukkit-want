@@ -7,6 +7,7 @@
 #  - http://www.minecraftwiki.net/wiki/Data_values
 #
 # author: Christopher O'Brien <obriencj@gmail.com>
+# updated data: Samantha Bohn
 #
 
 items:
@@ -14,19 +15,24 @@ items:
     name:
       - Stone
       - Rock
+    group: natural
   - id: 2
     name:
       - Grass
+    group: natural
   - id: 3
     name:
       - Dirt
+    group: natural
   - id: 4
     name:
       - Cobblestone
+    group: construction
   - id: 5
     name:
       - Wooden Plank
       - Lumber
+    group: construction
   - id: 6
     name:
       - Sapling
@@ -38,35 +44,45 @@ items:
       - type: 2
         name:
           - Birch Sapling
+    group: plants
   - id: 8
     name:
       - Water
+    group: elemental
   - id: 9
     name:
       - Water Block
       - Still Water
+    group: elemental
   - id: 10
     name:
       - Lava
+    group: restricted
   - id: 11
     name:
       - Lava Block
       - Still Lava
-  - id: 12
+    group: restricted
+    - id: 12
     name:
       - Sand
+    group: natural
   - id: 13
     name:
       - Gravel
+    group: natural
   - id: 14
     name:
       - Gold Ore
+    group: ore
   - id: 15
     name:
       - Iron Ore
+    group: ore
   - id: 16
     name:
       - Coal Ore
+    group: ore
   - id: 17
     name:
       - Log
@@ -81,6 +97,7 @@ items:
         name:
           - Birch Log
           - Birch Wood
+    group: natural
   - id: 18
     name:
       - Leaves
@@ -92,50 +109,62 @@ items:
       - type: 2
         name:
           - Birch Leaves
+    group: plants
   - id: 20
     name:
       - Glass
       - Window
+    group: construction
   - id: 21
     name:
       - Lapis Lazuli Ore
       - Lapis Ore
+    group: ore
   - id: 23
     name:
       - Dispenser
       - Turret
+    group: home
   - id: 24
     name:
       - Sandstone
+    group: natural
   - id: 25
     name:
       - Note Block
       - Sound Block
       - Noise Block
+    group: home
   - id: 27
     name:
       - Powered Rail
       - Booster Track
       - Booster
+    group: railway
   - id: 28
     name:
       - Detector Rail
       - Trigger Track
+    group: railway
   - id: 29
     name:
       - Sticky Piston
       - Goo Piston
+    group: redstone 
   - id: 30
     name:
       - Cobweb
       - Spider Web
       - Web
+    group: misc
   - id: 33
     name:
       - Piston
+    group: redstone
   - id: 35
     name:
       - Wool
+    group: natural
     types:
       - type: 0
         name:
@@ -190,21 +219,35 @@ items:
       - Flower
       - Yellow Flower
       - Tulip
+    group: plants
   - id: 38
     name:
       - Rose
       - Red Flower
+    group: plants
   - id: 39
     name:
       - Brown Mushroom
+      - Mushroom
+    group: plants
   - id: 40
     name:
       - Red Mushroom
+    group: plants
+  - id: 41
+    name:
+      - Gold Block
+    group: rich
+  - id: 42
+    name:
+      - Iron Block
+    group: construction
   - id: 43
     name:
       - Double Slab
       - Stone Double Slab
       - Double Stone
+    group: construction
     types:
       - type: 0
       - type: 1
@@ -225,6 +268,7 @@ items:
       - Slab
       - Half Block
       - Half Stone
+    group: construction
     types:
       - type: 0
       - type: 1
@@ -243,15 +287,18 @@ items:
   - id: 45
     name:
       - Brick
+    group: construction
   - id: 46
     name:
       - TNT
       - Dynamite
       - Boom
+    group: restricted
   - id: 47
     name:
       - Bookshelf
       - Book Shelf
+    group: construction
   - id: 48
     name:
       - Mossy Cobblestone
@@ -259,120 +306,185 @@ items:
       - Moss
       - Dungeon Cobblestone
       - Dungeon Stone
+    group: construction
   - id: 49
     name:
       - Obsidian
       - Obsidium
+    group: construction
   - id: 50
     name:
       - Torch
+    group: common
   - id: 51
     name:
       - Fire
+    group: restricted
   - id: 52
     name:
       - Monster Spawner
       - Spawner
+    group: restricted
   - id: 53
     name:
       - Wooden Stairs
       - Wooden Steps
       - Wood Stairs
       - Wood Steps
+    group: construction
   - id: 54
     name:
       - Chest
       - Treasure Chest
       - Box
+    group: home
+  - id: 57
+    name:
+      - Diamond Block
+    group: rich
   - id: 58
     name:
       - Crafting Table
       - Workbench
+    group: home
+  - id: 60
+    name:
+      - Soil
+      - Tilled Dirt
+    group: natural
   - id: 61
     name:
       - Furnace
       - Stove
+    group: home
   - id: 65
     name:
       - Ladder
+    group: common
   - id: 66
     name:
       - Rail
       - Minecart Tracks
       - Track
+    group: railway
   - id: 67
     name:
       - Stone Stairs
       - Stone Steps
       - Cobblestone Stairs
       - Cobblestone Steps
+    group: construction
   - id: 69
     name:
-      - Lever
+    - Lever
+    group: redstone
   - id: 70
     name:
       - Stone Pressue Plate
       - Stone Plate
+    group: redstone
   - id: 72
     name:
       - Wooden Pressure Plate
       - Wooden Plate
       - Wood Pressure Plate
       - Wood Plate
+    group: redstone
   - id: 76
     name:
       - Redstone Torch
       - Red Torch
+    group: redstone
   - id: 77
     name:
       - Button
       - Stone Button
+    group: redstone
+  - id: 78
+    name:
+      - Snow Top
+    group: natural
+  - id: 79
+    name:
+      - Ice
+    group: natural
+  - id: 80
+    name:
+      - Snow
+      - Snow Block
+    group: natural
   - id: 81
     name:
       - Cactus
+    group: plants
+  - id: 82
+    name:
+      - Clay Block
+    group: natural
   - id: 84
     name:
       - Jukebox
+    group: home
   - id: 85
     name:
       - Fence
       - Wooden Fence
+    group: construction
   - id: 86
     name:
       - Pumpkin
+    group: plants
+  - id: 87
+    name:
+      - Netherrack
+      - Nether rack
+    group: restricted
+  - id: 88
+    name:
+      - Soul Sand
+    group: restricted
   - id: 89
     name:
       - Glowstone
       - Glow Stone
+    group: natural
   - id: 96
     name:
       - Trapdoor
       - Trap Door
       - Hatch
+    group: home
   - id: 256
     name:
       - Iron Shovel
+    group: irontools
   - id: 257
     name:
       - Iron Pickaxe
       - Iron Pick
+    group: irontools
   - id: 258
     name:
       - Iron Axe
+    group: irontools
   - id: 259
     name:
       - Flint and Steel
       - Lighter
       - Fire Starter
+    group: tools
   - id: 260
     name:
       - Apple
+    group: food
   - id: 261
     name:
       - Bow
+    group: tools
   - id: 262
     name:
       - Arrow
+    group: common
   - id: 263
     name:
       - Coal
@@ -381,232 +493,446 @@ items:
       - type: 1
         name:
           - Charcoal
+    group: ore
   - id: 264
     name:
       - Diamond
+    group: ore
   - id: 265
     name:
       - Iron Bar
       - Iron Ingot
       - Iron
+    group: ore
   - id: 266
     name:
       - Gold Bar
       - Gold Ingot
       - Gold
+    group: ore
   - id: 267
     name:
       - Iron Sword
+    group: irontools
+  - id: 268
+    name:
+      - Wooden Sword
+      - Wood Sword
+    group: woodtools
+  - id: 278
+    name:
+      - Wooden Shovel
+      - Wood Shovel
+    group: woodtools
+  - id: 270
+    name:
+      - Wooden Pick
+      - Wooden Pickaxe
+      - Wood Pick
+      - Wood Pickaxe
+    group: woodtools
+  - id: 271
+    name:
+      - Wooden Axe
+      - Wood Axe
+    group: woodtools
+  - id: 272
+    name:
+      - Stone Sword
+    group: stonetools
+  - id: 273
+    name:
+      - Stone Shovel
+    group: stonetools
+  - id: 274
+    name:
+      - Stone Pickaxe
+      - Stone Pick
+    group: stonetools
+  - id: 275
+    name:
+      - Stone Axe
+    group: stonetools
   - id: 276
     name:
       - Diamond Sword
+    group: diamondtools
   - id: 277
     name:
       - Diamond Shovel
+    group: diamondtools
   - id: 278
     name:
       - Diamond Pickaxe
       - Diamond Pick
+    group: diamondtools
   - id: 279
     name:
       - Diamond Axe
+    group: diamondtools
   - id: 280
     name:
       - Stick
       - Wooden Stick
       - Wood Stick
+    group: misc
   - id: 281
     name:
       - Bowl
       - Wooden Bowl
       - Wood Bowl
       - Soup Bowl
+    group: misc
   - id: 282
     name:
       - Mushroom Soup
       - Soup
+    group: food
+  - id: 283
+    name: 
+      - Golden Sword
+      - Gold Sword
+    group: goldtools
+  - id: 284
+    name:
+      - Golden Shovel
+          - Gold Shovel
+    group: goldtools
+  - id: 285
+    name:
+      - Golden Pickaxe
+      - Golden Pick
+      - Gold Pickaxe
+      - Gold Pick
+    group: goldtools
+  - id: 286
+    name:
+      - Golden Axe
+      - Gold Axe
+    group: goldtools
   - id: 287
     name:
       - String
+    group: misc
   - id: 288
     name:
       - Feather
+    group: misc
   - id: 289
     name:
       - Gunpowder
       - Sulphur
+    group: misc
+  - id: 290
+    name:
+      - Wooden Hoe
+      - Wood Hoe
+    group: woodtools
+  - id: 291
+    name: 
+      - Stone Hoe
+    group: stonetools
   - id: 292
     name:
       - Iron Hoe
+    group: irontools
   - id: 293
     name:
       - Diamond Hoe
+    group: diamondtools
+  - id: 294
+    name:
+      - Golden Hoe
+      - Gold Hoe
+    group: goldtools
   - id: 295
     name:
       - Seeds
+    group: plants
   - id: 296
     name:
       - Wheat
+    group: plants
   - id: 297
     name:
       - Bread
+    group: food
+  - id: 298
+    name:
+      - Leather Helmet
+      - Leather Helm
+      - Leather Hat
+      - Leather Head
+      - Leather Headpiece
+    group: leatherarmor
+  - id: 299
+    name:
+      - Leather Chest
+      - Leather Shirt
+      - Leather Chestplate
+    group: leatherarmor
+  - id: 300
+    name:
+      - Leather Pants
+      - Leather Leggings
+      - Leather Legs
+    group: leatherarmor
+  - id: 301
+    name:
+      - Leather Feet
+      - Leather Boots
+      - Leather Shoes
+    group: leatherarmor
+  - id: 302
+    name:
+      - Chain Mail Helmet
+      - Chain Mail Helm
+      - Chain Mail Head
+      - Chain Mail Hat
+    group: chainmailarmor
+  - id: 303
+    name:
+      - Chain Mail Chest
+      - Chain Mail Chestplate
+      - Chain Mail Shirt
+    group: chainmailarmor
+  - id: 304
+    name: 
+      - Chain Mail Pants
+      - Chain Mail Leggings
+      - Chain Mail Legs
+    group: chainmailarmor
+  - id: 305
+    name:
+      - Chain Mail Feet
+      - Chain Mail Shoes
+      - Chain Mail Boots
+    group: chainmailarmor
   - id: 306
     name:
       - Iron Helmet
       - Iron Helm
       - Iron Hat
       - Iron Head
+    group: ironarmor
   - id: 307
     name:
       - Iron Chestplate
       - Iron Chest
       - Iron Shirt
+    group: ironarmor
   - id: 308
     name:
       - Iron Leggings
       - Iron Legs
       - Iron Pants
+    group: ironarmor
   - id: 309
     name:
       - Iron Boots
       - Iron Feet
       - Iron Shoes
+    group: ironarmor
   - id: 310
     name:
       - Diamond Helmet
       - Diamond Helm
       - Diamond Hat
       - Diamond Head
+    group: diamondarmor
   - id: 311
     name:
       - Diamond Chestplate
       - Diamond Chest
       - Diamond Shirt
+    group: diamondarmor
   - id: 312
     name:
       - Diamond Leggings
       - Diamond Legs
       - Diamond Pants
+    group: diamondarmor
   - id: 313
     name:
       - Diamond Boots
       - Diamond Feet
       - Diamond Shoes
+    group: diamondarmor
+  - id: 314
+    name:
+      - Gold Helmet
+      - Gold Helm
+      - Gold Hat
+      - Gold Head
+    group: goldarmor
+  - id: 315
+    name:
+      - Gold Chestplate
+      - Gold Chest
+      - Gold Shirt
+    group: goldarmor
+  - id: 316
+    name:
+      - Gold Leggings 
+      - Gold Legs
+      - Gold Pants
+    group: goldarmor
+  - id: 317
+    name:
+      - Gold Feet
+      - Gold Shoes
+      - Gold Boots
+    group: goldarmor
   - id: 318
     name:
       - Flint
       - Arrow Head
+    group: misc
   - id: 319
     name:
       - Raw Porkchop
       - Raw Pork
       - Pork
+    group: food
   - id: 320
     name:
       - Cooked Porkchop
       - Cooked Pork
       - Bacon
+    group: food
   - id: 321
     name:
       - Painting
       - Artwork
       - Art
+    group: miscsingles
   - id: 322
     name:
       - Golden Apple
       - Gold Apple
+    group: restricted
   - id: 323
     name:
       - Sign
       - Wooden Sign
       - Wood Sign
+    group: miscsingles
   - id: 324
     name:
       - Wooden Door
       - Wood Door
       - Door
+    group: home
   - id: 325
     name:
       - Bucket
+    group: miscsingles
   - id: 326
     name:
       - Water Bucket
+    group: miscsingles
   - id: 327
     name:
       - Lava Bucket
+    group: restricted
   - id: 328
     name:
       - Minecart
+    group: vehicles
   - id: 329
     name:
       - Saddle
+    group: vehicles
   - id: 330
     name:
       - Iron Door
       - Metal Door
+    group: home
   - id: 331
     name:
       - Redstone Dust
       - Redstone
+    group: redstone
   - id: 332
     name:
       - Snowball
       - Snow Ball
+    group: misc
   - id: 333
     name:
       - Boat
       - Ship
+    group: vehicles
   - id: 334
     name:
       - Leather
       - Hide
+    group: misc
   - id: 335
     name:
       - Milk Bucket
       - Milk
+    group: misc
   - id: 337
     name:
       - Clay Ball
       - Clay
+    group: natural
   - id: 338
     name:
       - Sugar Cane
-      - Reeds
+      - Reed
       - Bamboo
+      - Reeds
+    group: plants
+  - id: 339
+    name: 
+      - Paper
+    group: misc
   - id: 340
     name:
       - Book
+    group: misc
   - id: 341
     name:
       - Slime Ball
       - Goo
+    group: misc
   - id: 342
     name:
       - Storage Minecart
+    group: vehicles
   - id: 343
     name:
       - Powered Minecart
+    group: vehicles
   - id: 344
     name:
       - Egg
+    group: misc
   - id: 345
     name:
       - Compass
+    group: tools
   - id: 346
     name:
       - Fishing Rod
       - Fishing Pole
+    group: tools
   - id: 347
     name:
       - Clock
       - Watch
+    group: tools
   - id: 349
     name:
       - Fish
       - Raw Fish
+    group: food
   - id: 350
     name:
       - Cooked Fish
+    group: food
   - id: 351
     name:
       - Ink Sac
@@ -668,27 +994,34 @@ items:
           - White Dye
           - Bleach
           - Bone Meal
+    group: misc
   - id: 352
     name:
       - Bone
+    group: misc
   - id: 353
     name:
       - Sugar
+    group: misc
   - id: 354
     name:
       - Cake
+    group: food
   - id: 355
     name:
       - Bed
+    group: home
   - id: 356
     name:
       - Redstone Repeater
       - Redstone Diode
       - Diode
       - Repeater
+    group: redstone
   - id: 357
     name:
       - Cookie
+    group: food
   - id: 358
     name:
       - Map
@@ -733,10 +1066,22 @@ items:
         name:    
           - Map 9
           - map_9
+    group: miscsingles
   - id: 359
     name:
       - Shears
       - Scissors
+    group: tools
+  - id: 2256
+    name:
+      - Yellow Record
+      - Yellow Disc
+    group: home
+  - id: 2257
+    name:
+      - Green Record
+      - Green Disc
+    group: home
         
 
 
@@ -748,61 +1093,57 @@ items:
 
 groups:
   - name: natural
-    items: [1, 2, 3, 12, 13, 17, 24, 35, 89, 337 ]
     stack: 64
   - name: construction
-    items: [4, 5, 20, 43, 44, 45, 47, 48, 49, 53, 67, 85 ]
     stack: 64
   - name: plants
-    items: [6, 18, 37, 38, 39, 40, 81, 86, 295, 296, 338 ]
     stack: 16
   - name: ore
-    items: [14, 15, 16, 21, 263, 264, 265, 266 ]
     stack: 32
   - name: home
-    items: [23, 25, 26, 54, 58, 61, 84, 96, 324, 330, 355 ]
     stack: 1
   - name: railway
-    items: [27, 28, 66 ]
     stack: 32
   - name: vehicles
-    items: [328, 329, 342, 343 ]
+    stack: 1
   - name: redstone
-    items: [29, 33, 69, 70, 72, 76, 77, 331, 356 ]
     stack: 16
   - name: restricted
-    items: [46, 51, 52, 322 ]
     stack: 16
   - name: elemental
-    items: [8, 9, 10, 11, 51 ]
     stack: 8
   - name: common
-    items: [50, 65, 262 ]
     stack: 64
   - name: tools
-    items: [259, 261, 345, 346, 347, 359 ]
     stack: 1
   - name: irontools
-    items: [256, 257, 258, 267, 292 ]
     stack: 1
   - name: ironarmor
-    items: [306, 308, 309, 310 ]
     stack: 1
   - name: diamondtools
-    items: [276, 277, 278, 279, 293 ]
     stack: 1
   - name: diamondarmor
-    items: [310, 311, 312, 313 ]
     stack: 1
   - name: misc
-    items: [30, 280, 281, 287, 288, 289, 318, 332, 334, 340, 341, 344, 351, 352, 353 ]
     stack: 16
   - name: miscsingles
-    items: [321, 323, 325, 358 ]
     stack: 1
   - name: food
-    items: [260, 282, 297, 319, 320, 349, 350, 354, 357 ]
     stack: 1
+  - name: goldarmor
+    stack: 1
+  - name: chainmailarmor
+    stack: 1
+  - name: leatherarmor
+    stack: 1
+  - name: goldtools
+    stack: 1
+  - name: stonetools
+    stack: 1
+  - name: woodtools
+    stack: 1
+  - name: rich
+    stack: 64
 
 
 # The end.
