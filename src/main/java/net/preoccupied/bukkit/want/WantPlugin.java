@@ -20,9 +20,8 @@ import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionDefault;
 
 import net.preoccupied.bukkit.ItemUtils;
+import net.preoccupied.bukkit.PlayerCommand;
 import net.preoccupied.bukkit.PluginConfiguration;
-import net.preoccupied.bukkit.permissions.PermissionCheck;
-import net.preoccupied.bukkit.permissions.PermissionCommand;
 
 
 
@@ -297,7 +296,7 @@ public class WantPlugin extends JavaPlugin {
 
     private void setupCommands() {
 	
-	new PermissionCommand(this, "want") {
+	new PlayerCommand(this, "want") {
 	    public boolean run(Player player, String itemname) {
 		return run(player, itemname, null);
 	    }
@@ -330,7 +329,7 @@ public class WantPlugin extends JavaPlugin {
 	};
 
 
-	new PermissionCommand(this, "grant") {
+	new PlayerCommand(this, "grant") {
 	    public boolean run(Player player, String recipient, String itemname) {
 		return run(player, recipient, itemname, null);
 	    }
@@ -369,7 +368,7 @@ public class WantPlugin extends JavaPlugin {
 	};
 
 
-	new PermissionCommand(this, "pack") {
+	new PlayerCommand(this, "pack") {
 	    public boolean run(Player player, String recipient, String packname) {
 		PackData pack = getPack(packname);
 
@@ -409,7 +408,7 @@ public class WantPlugin extends JavaPlugin {
 	};
 
 
-	new PermissionCommand(this, "item-search") {
+	new PlayerCommand(this, "item-search") {
 	    public boolean run(Player player, String glob) {
 		Set<ItemData> found = new HashSet<ItemData>();
 
@@ -435,7 +434,7 @@ public class WantPlugin extends JavaPlugin {
 	};
 
 
-	new PermissionCommand(this, "pack-list") {
+	new PlayerCommand(this, "pack-list") {
 	    public boolean run(Player player) {
 		msg(player, "Pack names:");
 		for(PackData p : packs.values()) {
@@ -461,7 +460,7 @@ public class WantPlugin extends JavaPlugin {
 	};
 
 
-	new PermissionCommand(this, "pack-info") {
+	new PlayerCommand(this, "pack-info") {
 	    public boolean run(Player player, String packname) {
 		PackData pack = getPack(packname);
 
