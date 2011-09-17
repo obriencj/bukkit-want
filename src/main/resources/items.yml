@@ -263,6 +263,14 @@ items:
         name:
           - Cobblestone Double Slab
           - Double Cobblestone
+      - type: 4 
+        name: 
+          - Brick Double Slab
+          - Double Brick
+      - type: 5
+        name:
+          - Stone Brick Double Slab
+          - Double Stone Brick
   - id: 44
     name:
       - Slab
@@ -283,7 +291,15 @@ items:
       - type: 3
         name:
           - Cobblestone Slab
-          - Half Cobblestone
+          - Half Cobblestone 
+      - type: 4
+        name:
+          - Brick Slab
+          - Half Brick
+      - type: 5
+        name:
+          - Stone Brick Slab
+          - Half Stone Brick
   - id: 45
     name:
       - Brick
@@ -448,12 +464,74 @@ items:
       - Glowstone
       - Glow Stone
     group: natural
+  - id: 91
+    name:
+      - Jack-o-lantern
+      - Jack o lantern
+    group: misc
   - id: 96
     name:
       - Trapdoor
       - Trap Door
       - Hatch
     group: home
+  - id: 98
+    name:
+      - Stone Brick
+      - Stone Bricks
+      - The Better Stone
+    group: construction
+  - id: 99
+    name:
+      - Huge Red Mushroom
+    group: miscsingles
+  - id: 100
+    name:
+      - Huge Brown Mushroom
+    group: miscsingles
+  - id: 101
+    name:
+      - Iron Bars
+      - Iron Fence
+    group: construction
+  - id: 102 
+    name:
+      - Glass Pane
+      - Glass Window Pane
+      - Window Pane
+    group: construction
+  - id: 103 
+    name:
+      - Melon Block
+      - Watermelon Block
+      - Melon
+    group: misc
+  - id: 104
+    name:
+      - Pumpkin Stem
+    group: plants
+  - id: 105
+    name:
+      - Melon Stem
+    group: plants
+  - id: 106
+    name:
+      - Vines
+      - Vine
+    group: plants
+  - id: 107
+    name:
+      - Fence Gate
+      - Gate
+    group: construction
+  - id: 108
+    name:
+      - Brick Stairs
+    group: construction
+  - id: 109
+    name:
+      - Stone Brick Stairs
+    group: construction
   - id: 256
     name:
       - Iron Shovel
@@ -1072,6 +1150,48 @@ items:
       - Shears
       - Scissors
     group: tools
+  - id: 360
+    name:
+      - Melon Slice
+      - Watermelon Slice
+    group: food
+  - id: 361
+    name:
+      - Pumpkin Seeds
+    group: plants
+  - id: 362
+    name:
+      - Melon Seeds
+      - Watermelon Seeds
+    group: plants
+  - id: 363
+    name: 
+      - Raw Beef
+      - Beef
+    group: food
+  - id: 364
+    name:
+      - Steak
+      - Cooked Beef
+    group: food
+  - id: 365
+    name:
+      - Raw Chicken
+      - Chicken
+    group: food
+  - id: 366
+    name:
+      - Cooked Chicken
+    group: food
+  - id: 367
+    name:
+      - Rotten Flesh
+      - Zombie Flesh
+    group: miscsingles
+  - id: 368
+    name:
+      - Ender Pearl
+    group: restricted
   - id: 2256
     name:
       - Yellow Record
